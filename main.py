@@ -1,13 +1,14 @@
+import os
 from typing import Optional
 
-from fastapi import FastAPI
+from config.server import app
 
-app = FastAPI()
+from constants.api_keys import APIKey
 
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+def home():
+    return {APIKey.MESSAGE: f"Arukou Loaded and Serving for {os.environ.get('ENVIRONMENT')} environment!"}
 
 
 @app.get("/items/{item_id}")
