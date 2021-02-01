@@ -9,9 +9,9 @@ from constants.environment import Environment
 
 class GlobalDBHelper:
 
-    base = None
-    engine = None
-    session = None
+    BASE = None
+    ENGINE = None
+    SESSION = None
 
     def __init__(self):
         if server_environment == Environment.LOCAL:
@@ -21,9 +21,9 @@ class GlobalDBHelper:
             self.__setup_production_database()
 
     def __setup_local_database(self):
-        self.engine = create_engine('sqlite:///:memory:', echo=True)
-        self.base = declarative_base()
-        self.session = Session(bind=self.engine)
+        self.ENGINE = create_engine('sqlite:///:memory:', echo=True)
+        self.BASE = declarative_base()
+        self.SESSION = Session(bind=self.ENGINE)
 
     def __setup_production_database(self):
         pass
