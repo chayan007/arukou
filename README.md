@@ -1,9 +1,8 @@
 ![All Might Smiling](https://i.pinimg.com/originals/52/4a/c3/524ac3a5ea0fc82c36ceee69460cb543.gif)
 
-# Arukou - Find your walking mate
+# Arukou - Location tracking python project.
 
-Normal day-to-day street walkers will be able to get 
-the perfect walking mate from one destination to another.
+Know who walks by your side everytime.
 
 ### Technical Stack
 
