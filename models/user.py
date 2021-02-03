@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Sequence, String, LargeBinary
+from sqlalchemy import Column, Integer, Sequence, String
 
 from config.database import GlobalDBHelper
 
@@ -11,6 +11,7 @@ class User(GlobalDBHelper().BASE):
     username = Column(String(50), unique=True)
     email = Column(String(100), unique=True)
     hashed_password = Column(String(255))
+    image_url = Column(String(255), nullable=True)
 
     def __repr__(self):
         return f"<User(name='{self.fullname}', username='{self.username}')>"
