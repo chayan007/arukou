@@ -27,3 +27,6 @@ class GlobalDBHelper:
 
     def __setup_production_database(self):
         pass
+
+
+LOCAL_MODEL_SETTINGS = GlobalDBHelper()
