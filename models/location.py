@@ -1,13 +1,15 @@
 from sqlalchemy import Column, Integer, Sequence, String
 from sqlalchemy_jsonfield import JSONField
 
-from config.database import GlobalDBHelper
+from config.database import LOCAL_MODEL_SETTINGS
 
 
-class Location(GlobalDBHelper().BASE):
+class Location(LOCAL_MODEL_SETTINGS.BASE):
 
     __tablename__ = 'locations'
+
     id = Column(Integer, Sequence('location_id_seq'), primary_key=True)
+
     latitude = Column(Integer)
     longitude = Column(Integer)
     city = Column(String(100), nullable=True)
