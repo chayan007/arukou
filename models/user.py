@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, Sequence, String, Float
 
-from config.database import LOCAL_MODEL_SETTINGS
+from config.database import DATABASE_DRIVER
 
 
-class User(LOCAL_MODEL_SETTINGS.BASE):
+class User(DATABASE_DRIVER.BASE):
 
     __tablename__ = 'users'
 

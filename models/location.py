@@ -1,10 +1,10 @@
 from sqlalchemy import Column, Integer, Sequence, String
 from sqlalchemy_jsonfield import JSONField
 
-from config.database import LOCAL_MODEL_SETTINGS
+from config.database import DATABASE_DRIVER
 
 
-class Location(LOCAL_MODEL_SETTINGS.BASE):
+class Location(DATABASE_DRIVER.BASE):
 
     __tablename__ = 'locations'
 

@@ -1,13 +1,13 @@
 from sqlalchemy import Column, Integer, Sequence, String, ForeignKey
 
-from config.database import LOCAL_MODEL_SETTINGS
+from config.database import DATABASE_DRIVER
 
 from models.location import Location
 
 from models.user import User
 
 
-class Meet(LOCAL_MODEL_SETTINGS.BASE):
+class Meet(DATABASE_DRIVER.BASE):
 
     __tablename__ = 'meets'
 
