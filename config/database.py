@@ -29,4 +29,4 @@ class GlobalDBHelper:
         pass
 
 
-LOCAL_MODEL_SETTINGS = GlobalDBHelper()
+DATABASE_DRIVER = GlobalDBHelper()
