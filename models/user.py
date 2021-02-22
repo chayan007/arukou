@@ -12,6 +12,7 @@ class User(DATABASE_DRIVER.BASE):
     fullname = Column(String(50))
     username = Column(String(50), unique=True)
     email = Column(String(100), unique=True)
+    mobile = Column(String(100), unique=True, nullable=True)
     hashed_password = Column(String(255))
     image_url = Column(String(255), nullable=True)
     rating = Column(Float(10), default=0.0)

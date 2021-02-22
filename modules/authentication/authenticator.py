@@ -1,8 +1,27 @@
+import hashlib
+
+from config.database import DATABASE_DRIVER
+
+from models.user import User
+
+
 class Authenticator:
 
-    def register(self):
+    def __init__(self):
+        """Initialize instance variables."""
+        self.db_session = DATABASE_DRIVER.SESSION
+
+    def register(self, fullname: str, email: str, username: str, password: str, mobile: str):
         """Register an user."""
-        pass
+        user = User()
+        user.fullname = fullname
+        user.email = email
+        user.username = username
+        user.hashed_password = hashlib.md5(password.strip())
+        user.mobile = mobile
+
+        self.db_session.add(user)
+        self.db_session.commit()
 
     def login(self):
         """Login an user."""
