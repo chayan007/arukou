@@ -20,8 +20,11 @@ class Authenticator:
         user.hashed_password = hashlib.md5(password.strip())
         user.mobile = mobile
 
-        self.db_session.add(user)
-        self.db_session.commit()
+        try:
+            self.db_session.add(user)
+            self.db_session.commit()
+        except BaseException as e:
+            raise e
 
     def login(self):
         """Login an user."""
