@@ -5,7 +5,7 @@ from models.user import User
 
 class Tracker:
 
-    def current_location(self, user: User):
+    def current_location(self, request, user: User):
         pass
 
     def nearby_profiles(self, location: Location):
