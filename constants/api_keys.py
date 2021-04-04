@@ -6,4 +6,4 @@ class APIKey:
 
 class APIMessage:
 
-    error = 'Encountered Error at {}'
+    error = 'Encountered Error: {}'
